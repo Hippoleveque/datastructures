@@ -34,3 +34,7 @@ def test_indexes_reverse(linked_list,index,value):
 def test_contains(linked_list):
     assert linked_list.contains(3) == True
 
+
+@pytest.mark.parametrize("index,value",[(2,3),(1,2),(0,1)])
+def test_getitem(linked_list,index,value):
+    assert linked_list[index] == value 
