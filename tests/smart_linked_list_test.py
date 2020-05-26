@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from datastructures.smart_linked_list import LinkedList
+from datastructures.linked_list import LinkedList
 import pytest
 
 @pytest.fixture

@@ -87,4 +87,7 @@ class LinkedList:
         return False
 
 
+    def __getitem__(self,index):
+        # returns the item located at index with default indexing
+        return self.access(index)
 
