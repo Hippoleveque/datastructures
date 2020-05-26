@@ -5,4 +5,5 @@ jobs:
       - image: "python:3"
     steps:
       - checkout
+      - run : make init
       - run : make test
