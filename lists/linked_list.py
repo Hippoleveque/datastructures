@@ -40,7 +40,6 @@ class LinkedList:
             return str(self._value)
         
         
-        
     def __init__(self,*args):
         self._head = None
         self._size = 0
@@ -62,8 +61,11 @@ class LinkedList:
     
     def access(self,index):
         # Access the indexth element of the list, starting at the head (O(size))
-        if index >= self._size:
+        if index < 0:
+            index = self._size + index
+        if index >= self._size | index < 0:
             raise IndexError("Index out of range")
+        
         current_node = self._head
         for i in range(index):
             current_node = current_node.next
