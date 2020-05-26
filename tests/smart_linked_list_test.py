@@ -34,9 +34,3 @@ def test_indexes_reverse(linked_list,index,value):
 def test_contains(linked_list):
     assert linked_list.contains(3) == True
 
-<<<<<<< HEAD
-def test_contains2(linked_list):
-    assert linked_list.contains(4)
-=======
-
->>>>>>> master
