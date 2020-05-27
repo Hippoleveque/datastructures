@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from datastructures.stack_with_list import StackList
+from datastructures.stack_linked_list import Stack
 
 
 @pytest.fixture
 def empty_stack():
     """Return empty stack"""
-    stk = StackList()
+    stk = Stack()
     return stk
 
 @pytest.fixture
 def stack():
     """Return stack with 10 inside"""
-    stack = StackList()
+    stack = Stack()
     stack.push(10)
     return stack
 

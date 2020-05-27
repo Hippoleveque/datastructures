@@ -38,3 +38,11 @@ def test_contains(linked_list):
 @pytest.mark.parametrize("index,value",[(2,3),(1,2),(0,1)])
 def test_getitem(linked_list,index,value):
     assert linked_list[index] == value 
+
+
+def test_head(linked_list):
+    assert linked_list.head == 1
+
+def test_remove_front(linked_list):
+    linked_list.remove_front()
+    assert linked_list.head == 2
