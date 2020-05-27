@@ -91,3 +91,14 @@ class LinkedList:
         # returns the item located at index with default indexing
         return self.access(index)
 
+    
+    @property
+    def head(self):
+        return self._head.value
+
+
+    def remove_front(self):
+        if self.empty():
+            raise ValueError("List is empty")
+        self._head = self._head.next
+        self._size -= 1
