@@ -34,6 +34,15 @@ class PriorityQueue:
         return to_ret
 
 
+    def dequeue_with_priority(self):
+        if self.empty():
+            raise ValueError("pqueue is empty")
+        to_ret = self._heap[0]
+        self._heap[0], self._heap[-1] = self._heap[-1], self._heap[0]
+        self._heap = self._heap[:-1]
+        self._fix_heap_downward(0)
+        return to_ret
+
     def _fix_heap_upward(self,index):
         if index == 0:
             return None
